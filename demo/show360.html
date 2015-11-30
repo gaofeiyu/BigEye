@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="../src/bigeye.js"></script>
+    <style>
+        #show360{ width: 100%; position: relative;}
+        #show360 img{ width: 100%;}
+    </style>
+</head>
+<body>
+<div id="show360"></div>
+<script>
+    var bigEye = new BigEye();
+    var show360 = bigEye.show360({
+        element : '#show360',
+        imgPath : 'images/show360/'
+    });
+</script>
+</body>
+</html>
