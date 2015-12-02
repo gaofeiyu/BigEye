@@ -251,10 +251,10 @@
             var r = range > 0 ? 1 : -1;
             if(now<Math.abs(range)*2){
                 opt.easeTime = setTimeout(function(){
-                    s360.turnRotate( range+r-Math.ceil(self.Tween.Circ.easeOut(now,0,range,Math.abs(range)*2)) );
+                    s360.turnRotate( range+r-Math.ceil(self.tween.Circ.easeOut(now,0,range,Math.abs(range)*2)) );
                     s360.easeStop(now+1,callback);
-                },Math.ceil(self.Tween.Circ.easeIn(now,10,30,Math.abs(range)*2)));
-                //console.log(Math.ceil(self.Tween.Circ.easeOut(now,0,range,Math.abs(range)*2)),Math.ceil(self.Tween.Circ.easeIn(now,1,20,Math.abs(range)*2)));
+                },Math.ceil(self.tween.Circ.easeIn(now,10,30,Math.abs(range)*2)));
+                //console.log(Math.ceil(self.tween.Circ.easeOut(now,0,range,Math.abs(range)*2)),Math.ceil(self.tween.Circ.easeIn(now,1,20,Math.abs(range)*2)));
             }else{
                 if(typeof callback != 'undefined'){
                     callback.call(this,range);
@@ -360,7 +360,7 @@
     BigEye.prototype.platform = function(){
         return navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i);
     };
-    BigEye.prototype.Tween = (function(){
+    BigEye.prototype.tween = (function(){
         return {
             Linear: function(t,b,c,d){ return c*t/d + b; },
             Quad: {
@@ -486,7 +486,7 @@
             },
             Bounce: {
                 easeIn: function(t,b,c,d){
-                    return c - Tween.Bounce.easeOut(d-t, 0, c, d) + b;
+                    return c - tween.Bounce.easeOut(d-t, 0, c, d) + b;
                 },
                 easeOut: function(t,b,c,d){
                     if ((t/=d) < (1/2.75)) {
@@ -500,8 +500,8 @@
                     }
                 },
                 easeInOut: function(t,b,c,d){
-                    if (t < d/2) return Tween.Bounce.easeIn(t*2, 0, c, d) * .5 + b;
-                    else return Tween.Bounce.easeOut(t*2-d, 0, c, d) * .5 + c*.5 + b;
+                    if (t < d/2) return tween.Bounce.easeIn(t*2, 0, c, d) * .5 + b;
+                    else return tween.Bounce.easeOut(t*2-d, 0, c, d) * .5 + c*.5 + b;
                 }
             }
         };
