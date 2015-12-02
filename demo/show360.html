@@ -6,17 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="../src/bigeye.js"></script>
     <style>
-        #show360{ width: 100%; position: relative;}
+        body{ overflow: hidden; margin: 0; padding: 0; background: #ffeeff;}
+        ol,li{ list-style: none;}
+        #show360,#loading{ position: absolute; width: 960px; height: 540px; overflow: hidden; top: 50%; left: 50%; margin: -270px 0 0 -480px; text-align: center; line-height: 540px; }
+        #show360 ol{ width: 100%; height: 100%;}
+        #show360 li{ width: 100%; height: 100%;}
         #show360 img{ width: 100%;}
     </style>
 </head>
 <body>
+<div id="loading"></div>
 <div id="show360"></div>
 <script>
     var bigEye = new BigEye();
     var show360 = bigEye.show360({
         element : '#show360',
-        imgPath : 'images/show360/'
+        imgPath : 'images/show360/',
+        loadProcess : function(num){
+            document.getElementById('loading').innerText = num+'%';
+        },
+        loadComplete: function(){
+            document.body.removeChild(document.getElementById('loading'));
+        }
     });
 </script>
 </body>
