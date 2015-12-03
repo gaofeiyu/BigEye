@@ -10,8 +10,8 @@
 <h2>ДњТыЪОР§</h2>
 <p>html:</p>
 
-    <div id="loading"></div>
-    <div id="show360"></div>
+        <div id="loading"></div>
+        <div id="show360"></div>
 
 <p>JS:</p>
 <pre>
