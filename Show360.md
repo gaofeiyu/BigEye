@@ -32,24 +32,24 @@ var show360 = bigEye.show360({
 
 <h2>属性说明</h2>
 <pre><code>
-element: '',                // 目标元素
-width: '',                  // 元素宽度，不设置为自适应 **还没做
-height: '',                 // 元素高度，不设置为自适应 **还没做
-rotateRange: '2',           // 旋转单张角度
-imgPath: 'pic/',            // 图片相对路径
-imgPrefix: 'threesixty_',   // 图片名称前缀
-imgType: 'jpg',             // 图片类型
+    element: '',                // 目标元素
+    width: '',                  // 元素宽度，不设置为自适应 **还没做
+    height: '',                 // 元素高度，不设置为自适应 **还没做
+    rotateRange: '2',           // 旋转单张角度
+    imgPath: 'pic/',            // 图片相对路径
+    imgPrefix: 'threesixty_',   // 图片名称前缀
+    imgType: 'jpg',             // 图片类型
 
-startIndex: '1',            // 从第几张图开始
-maxScale: '3',              // 最大放大倍率，1表示不需要放大功能
-autoPlay: false,            // 是否可以自动播放
-autoPlaySpeed: 20,          // 自动播放速度
-loading: true,             // 是否需要预加载
+    startIndex: '1',            // 从第几张图开始
+    maxScale: '3',              // 最大放大倍率，1表示不需要放大功能
+    autoPlay: false,            // 是否可以自动播放
+    autoPlaySpeed: 20,          // 自动播放速度
+    loading: true,             // 是否需要预加载
 </code></pre>
 <h2>方法说明</h2>
-    <pre><code>
-loadProcess: null,          // 加载中回调
-loadComplete: null          // 加载完成
-    </code></pre>
+<pre><code>
+    loadProcess: null,          // 加载中回调
+    loadComplete: null          // 加载完成
+</code></pre>
 <h2>算法思路</h2>
 <p>有空再写</p>
