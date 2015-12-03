@@ -7,7 +7,7 @@
 ## 开发进度
 <p>这里是任务池，想到就添加，标注已完成的是可用的，点击对应组件可以看到详细进度。</p>
 <ul>
-    <li>show360:物体360°拖动展示 [已完成] <a href="http://view.gaofeiyu.com/BigEye/demo/show360.html">[演示]</a> [详细说明]</li>
+    <li><a href="https://github.com/gaofeiyu/BigEye/blob/master/Show360.md">show360:物体360°拖动展示</a> [已完成] <a href="http://view.gaofeiyu.com/BigEye/demo/show360.html">[演示]</a> [详细说明]</li>
     <li>tween: 缓动组件 [已完成]</li>
 </ul>
 
